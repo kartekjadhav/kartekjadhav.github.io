@@ -2,12 +2,11 @@
 	if(isset($_POST['submit'])){
 		$name=$_POST['name'];
 		$email=$_POST['email'];
-		$phone=$_POST['phone'];
-		$msg=$_POST['msg'];
+		$msg=$_POST['message'];
 
 		$to='kartekjadhav2810@outlook.com'; // Receiver Email ID, Replace with your email ID
 		$subject='Form Submission';
-		$message="Name :".$name."\n"."Phone :".$phone."\n"."Wrote the following :"."\n\n".$msg;
+		$message="Name :".$name."\n"."Message :".$msg;
 		$headers="From: ".$email;
 
 		if(mail($to, $subject, $message, $headers)){
